@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Windows &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="附：ffmpeg相关用法" href="ffmpeg.html" />
+    <link rel="prev" title="Mac" href="mac.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">安装指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Mac</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">安装教程推荐</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">简要安装指南</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vscodemanim">VSCode调试manim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">附：ffmpeg相关用法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mobject/index.html">物体部分mobject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">工具函数utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">安装指南</a> &raquo;</li>
+        
+      <li>Windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation/windows.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="windows">
+<h1>Windows<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>安装教程推荐<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>知乎李狗嗨的 <a class="reference external" href="https://zhuanlan.zhihu.com/p/70243739">安装教程</a> 比较清楚</p>
+<p>同时推荐一视数学卷毛杨的两个教程 <a class="reference external" href="https://www.bilibili.com/video/av38126904">https://www.bilibili.com/video/av38126904</a> <a class="reference external" href="https://www.bilibili.com/read/cv4139851">https://www.bilibili.com/read/cv4139851</a>，
+pdcxs的安装实况 <a class="reference external" href="https://www.bilibili.com/video/BV14i4y1G7Yr">https://www.bilibili.com/video/BV14i4y1G7Yr</a></p>
+<p>有什么安装上的问题可以在 <a class="reference external" href="https://github.com/manim-kindergarten">manim-kindergarten的任意repo</a> 中提出issue，或者B站私信manim相关up主，或者加入QQ群</p>
+</div>
+<div class="section" id="id2">
+<h2>简要安装指南<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>不要把manim的安装看得很复杂，其本质上就是安装几个依赖的软件</p>
+<ul class="simple">
+<li><p><strong>python</strong> ，这个是必须的，版本应该在 <code class="docutils literal notranslate"><span class="pre">3.6</span></code> 以上（需要支持 <code class="docutils literal notranslate"><span class="pre">f-string</span></code> ）。推荐直接安装 <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> 方便管理环境</p></li>
+<li><p>一些python的 <strong>依赖模块</strong> ，在 <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> 中</p>
+<ol class="arabic simple">
+<li><p>直接使用pip安装，执行：<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> ，注意pip的版本应该和python相匹配（或者使用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span></code> 代替pip）</p></li>
+<li><p>使用anaconda，执行：<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyreadline</span></code> 即可</p></li>
+<li><p>附：pip临时换源： <code class="docutils literal notranslate"><span class="pre">-i</span> <span class="pre">https://pypi.tuna.tsinghua.edu.cn/simple</span></code></p></li>
+<li><p>附：<a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo">pycairo的whl文件下载地址</a> ，注意匹配python与系统版本</p></li>
+</ol>
+</li>
+<li><p><strong>ffmpeg</strong> ，用于处理生成视频，注意，不要使用anaconda或pip安装ffmpeg，要手动单独安装</p></li>
+<li><p><strong>LaTeX</strong> ，用于生成文字和公式，推荐直接安装TeXLive-full版，详见官网</p></li>
+<li><p><strong>sox</strong> ，可以不安装，只是用于播放渲染完成/失败的提示音（一般不用）</p></li>
+</ul>
+<p>将这些依赖都解决后，manim就可以使用了</p>
+</div>
+<div class="section" id="vscodemanim">
+<h2>VSCode调试manim<a class="headerlink" href="#vscodemanim" title="永久链接至标题">¶</a></h2>
+<p>假设你的VSCode打开的文件夹恰好是manim的官方库clone下来的根目录，即manim.py所在目录。</p>
+<ol class="arabic simple">
+<li><p>安装好python的官方扩展</p></li>
+<li><p>编辑lanuch.json为如下</p></li>
+</ol>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="c1">// 使用 IntelliSense 了解相关属性。</span>
+    <span class="c1">// 悬停以查看现有属性的描述。</span>
+    <span class="c1">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span>
+    <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;configurations&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Run manim&quot;</span><span class="p">,</span> <span class="c1">// 渲染manim的480p15预览</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;request&quot;</span><span class="o">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;program&quot;</span><span class="o">:</span> <span class="s2">&quot;${workspaceFolder}\\manim.py&quot;</span><span class="p">,</span> <span class="c1">// manim.py的路径</span>
+            <span class="s2">&quot;console&quot;</span><span class="o">:</span> <span class="s2">&quot;integratedTerminal&quot;</span><span class="p">,</span>           <span class="c1">// 使用vscode的终端进行调试</span>
+            <span class="s2">&quot;args&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;${file}&quot;</span><span class="p">,</span>                   <span class="c1">// 当前文件</span>
+                <span class="s2">&quot;-pl&quot;</span><span class="p">,</span>                       <span class="c1">// 480p15预览参数</span>
+                <span class="s2">&quot;--media_dir&quot;</span><span class="p">,</span>               <span class="c1">// 输出位置</span>
+                <span class="s2">&quot;${workspaceFolder}\\export&quot;</span> <span class="c1">// 这里定义输出位置</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Render manim&quot;</span><span class="p">,</span>                   <span class="c1">// 渲染1080p60的manim动画</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;request&quot;</span><span class="o">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;program&quot;</span><span class="o">:</span> <span class="s2">&quot;${workspaceFolder}\\manim.py&quot;</span><span class="p">,</span><span class="c1">// manim.py的路径</span>
+            <span class="s2">&quot;console&quot;</span><span class="o">:</span> <span class="s2">&quot;integratedTerminal&quot;</span><span class="p">,</span>          <span class="c1">// 使用vscode的终端进行调试</span>
+            <span class="s2">&quot;args&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;${file}&quot;</span><span class="p">,</span>                   <span class="c1">// 当前文件</span>
+                <span class="s2">&quot;--high_quality&quot;</span><span class="p">,</span>            <span class="c1">// 1080p60输出参数</span>
+                <span class="s2">&quot;-p&quot;</span><span class="p">,</span>                        <span class="c1">// 预览参数</span>
+                <span class="s2">&quot;--media_dir&quot;</span><span class="p">,</span>               <span class="c1">// 输出位置</span>
+                <span class="s2">&quot;${workspaceFolder}\\export&quot;</span> <span class="c1">// 这里定义输出位置</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>设置好之后就可以自由使用调试功能进行断点调试等操作了。</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ffmpeg.html" class="btn btn-neutral float-right" title="附：ffmpeg相关用法" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mac.html" class="btn btn-neutral float-left" title="Mac" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

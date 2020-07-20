@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Composition &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="物体部分mobject" href="../mobject/index.html" />
+    <link rel="prev" title="Update" href="update.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画部分animation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="creation.html">Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fading.html">Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="growing.html">Growing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indication.html">Indication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="movement.html">Movement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numbers.html">Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rotation.html">Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transform.html">Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">Update</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Composition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#animationgroup">AnimationGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#succession">Succession</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#laggedstart">LaggedStart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#laggedstartmap">LaggedStartMap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">动画基类Animation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mobject/index.html">物体部分mobject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">工具函数utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">动画部分animation</a> &raquo;</li>
+        
+      <li>Composition</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/animation/composition.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="composition">
+<h1>Composition<a class="headerlink" href="#composition" title="永久链接至标题">¶</a></h1>
+<div class="section" id="animationgroup">
+<h2>AnimationGroup<a class="headerlink" href="#animationgroup" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="manimlib.animation.composition.AnimationGroup">
+<em class="property">class </em><code class="sig-prename descclassname">manimlib.animation.composition.</code><code class="sig-name descname">AnimationGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">animations</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.animation.composition.AnimationGroup" title="永久链接至目标">¶</a></dt>
+<dd><p>包含一系列动画，默认lag_ratio为0，但不是序列（即不能通过下标访问动画）</p>
+</dd></dl>
+
+<video width="560" height="315" controls>
+    <source src="../_static/mk/AnimationGroupExample.mp4" type="video/mp4">
+</video><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AnimationGroupExample</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">mobjects</span> <span class="o">=</span> <span class="n">VGroup</span><span class="p">(</span>
+            <span class="n">Circle</span><span class="p">(),</span>
+            <span class="n">Circle</span><span class="p">(</span><span class="n">fill_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">TextMobject</span><span class="p">(</span><span class="s2">&quot;Text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">arrange_submobjects</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">,</span><span class="n">buff</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="n">anims</span> <span class="o">=</span> <span class="n">AnimationGroup</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span><span class="n">GrowFromCenter</span><span class="p">(</span><span class="n">mob</span><span class="p">)</span> <span class="k">for</span> <span class="n">mob</span> <span class="ow">in</span> <span class="n">mobjects</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">anims</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="succession">
+<h2>Succession<a class="headerlink" href="#succession" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="manimlib.animation.composition.Succession">
+<em class="property">class </em><code class="sig-prename descclassname">manimlib.animation.composition.</code><code class="sig-name descname">Succession</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">animations</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.animation.composition.Succession" title="永久链接至目标">¶</a></dt>
+<dd><p>将传入的动画一个一个执行</p>
+</dd></dl>
+
+<video width="560" height="315" controls>
+    <source src="../_static/mk/SuccessionExample.mp4" type="video/mp4">
+</video><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuccessionExample</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">mobjects</span> <span class="o">=</span> <span class="n">VGroup</span><span class="p">(</span>
+            <span class="n">Circle</span><span class="p">(),</span>
+            <span class="n">Circle</span><span class="p">(</span><span class="n">fill_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">TextMobject</span><span class="p">(</span><span class="s2">&quot;Text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">arrange_submobjects</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">,</span><span class="n">buff</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mobjects</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="n">anims</span> <span class="o">=</span> <span class="n">Succession</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span><span class="n">ApplyMethod</span><span class="p">(</span><span class="n">mob</span><span class="o">.</span><span class="n">shift</span><span class="p">,</span> <span class="n">DOWN</span><span class="p">)</span> <span class="k">for</span> <span class="n">mob</span> <span class="ow">in</span> <span class="n">mobjects</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">anims</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="laggedstart">
+<h2>LaggedStart<a class="headerlink" href="#laggedstart" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="manimlib.animation.composition.LaggedStart">
+<em class="property">class </em><code class="sig-prename descclassname">manimlib.animation.composition.</code><code class="sig-name descname">LaggedStart</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">animations</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.animation.composition.LaggedStart" title="永久链接至目标">¶</a></dt>
+<dd><p>和AnimationGroup相同，lag_ratio为0.05（即上一个动画运行到5%的时候运行下一个动画）</p>
+</dd></dl>
+
+<video width="560" height="315" controls>
+    <source src="../_static/mk/LaggedStartExample.mp4" type="video/mp4">
+</video><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LaggedStartExample</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">mobjects</span> <span class="o">=</span> <span class="n">VGroup</span><span class="p">(</span>
+            <span class="n">Circle</span><span class="p">(),</span>
+            <span class="n">Circle</span><span class="p">(</span><span class="n">fill_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">TextMobject</span><span class="p">(</span><span class="s2">&quot;Text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">arrange_submobjects</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">,</span><span class="n">buff</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mobjects</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="n">anims</span> <span class="o">=</span> <span class="n">LaggedStart</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span><span class="n">ApplyMethod</span><span class="p">(</span><span class="n">mob</span><span class="o">.</span><span class="n">shift</span><span class="p">,</span> <span class="n">DOWN</span><span class="p">)</span> <span class="k">for</span> <span class="n">mob</span> <span class="ow">in</span> <span class="n">mobjects</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">anims</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="laggedstartmap">
+<h2>LaggedStartMap<a class="headerlink" href="#laggedstartmap" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="manimlib.animation.composition.LaggedStartMap">
+<em class="property">class </em><code class="sig-prename descclassname">manimlib.animation.composition.</code><code class="sig-name descname">LaggedStartMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">AnimationClass</span></em>, <em class="sig-param"><span class="n">mobject</span></em>, <em class="sig-param"><span class="n">arg_creator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.animation.composition.LaggedStartMap" title="永久链接至目标">¶</a></dt>
+<dd><p>对所有mobject根据AnimationClass创建动画并传入LaggedStart中</p>
+</dd></dl>
+
+<video width="560" height="315" controls>
+    <source src="../_static/mk/LaggedStartMapExample.mp4" type="video/mp4">
+</video><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LaggedStartMapExample</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">mobjects</span> <span class="o">=</span> <span class="n">VGroup</span><span class="p">(</span>
+            <span class="n">Circle</span><span class="p">(),</span>
+            <span class="n">Circle</span><span class="p">(</span><span class="n">fill_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">TextMobject</span><span class="p">(</span><span class="s2">&quot;Text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="n">mobjects</span><span class="o">.</span><span class="n">arrange_submobjects</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">,</span><span class="n">buff</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mobjects</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="n">anims</span> <span class="o">=</span> <span class="n">LaggedStartMap</span><span class="p">(</span>
+            <span class="n">FadeOut</span><span class="p">,</span> <span class="n">mobjects</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">anims</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mobject/index.html" class="btn btn-neutral float-right" title="物体部分mobject" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="update.html" class="btn btn-neutral float-left" title="Update" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>物体部分mobject &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="数学物品Mobject" href="mobject.html" />
+    <link rel="prev" title="Composition" href="../animation/composition.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">物体部分mobject</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mobject.html">数学物品Mobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/index.html">三种物体基类types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svg/index.html">SVG图像相关物体svg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changing.html">Changing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html">CoordinateSystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobject_update_utils.html">MobjectUpdateUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="number_line.html">NumberLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numbers.html">Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="probability.html">Probability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_matchers.html">ShapeMatchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_d_shading_utils.html">ThreeDShadingUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_d_utils.html">ThreeDUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html">ThreeDimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value_tracker.html">ValueTracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_field.html">VectorField</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">工具函数utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>物体部分mobject</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/mobject/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mobject">
+<h1>物体部分mobject<a class="headerlink" href="#mobject" title="永久链接至标题">¶</a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">声明</p>
+<p>这一部分全为鹤翔万里与數心原创编写，目前示例部分还没有完成</p>
+</div>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">Mobject</span></code> 是屏幕中出现的所有物体的超类。</p>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">Mobject</span></code> 类似为抽象基类，它的直接子类只有：</p>
+<ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VMobject</span></code> 使用贝塞尔曲线作为轮廓</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PMobject</span></code> 点集构成物体</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractImageMobject</span></code> 关于图片的抽象基类</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueTracker</span></code> 只记录数值，不在屏幕上显示</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mobject.html">数学物品Mobject</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mobject.html#id1">Mobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobject.html#group">Group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/index.html">三种物体基类types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/vectorized_mobject.html">VMobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/point_cloud_mobject.html">PMobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/image_mobject.html">ImageMobject</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="svg/index.html">SVG图像相关物体svg</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="svg/svg_mobject.html">SVGMobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svg/tex_mobject.html">TexMobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svg/text_mobject.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svg/code_mobject.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svg/brace.html">Brace</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changing.html">Changing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changing.html#animatedboundary">AnimatedBoundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changing.html#tracedpath">TracedPath</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coordinate_systems.html">CoordinateSystems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html#coordinatesystem">CoordinateSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html#axes">Axes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html#threedaxes">ThreeDAxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html#numberplane">NumberPlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html#complexplane">ComplexPlane</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="frame.html">Frame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="frame.html#screenrectangle">ScreenRectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame.html#fullscreenrectangle">FullScreenRectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame.html#fullscreenfaderectangle">FullScreenFadeRectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame.html#pictureinpictureframe">PictureInPictureFrame</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#parametricfunction">ParametricFunction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#functiongraph">FunctionGraph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">Geometry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#tipablevmobject">TipableVMobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#arc">Arc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#arcbetweenpoints">ArcBetweenPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#curvedarrow">CurvedArrow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#curveddoublearrow">CurvedDoubleArrow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#circle">Circle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#dot">Dot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#smalldot">SmallDot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#ellipse">Ellipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#annularsector">AnnularSector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#sector">Sector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#annulus">Annulus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#line">Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#dashedline">DashedLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#tangentline">TangentLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#elbow">Elbow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#arrow">Arrow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#vector">Vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#doublearrow">DoubleArrow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#cubicbezier">CubicBezier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#polygon">Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#regularpolygon">RegularPolygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#triangle">Triangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#arrowtip">ArrowTip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#rectangle">Rectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#square">Square</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#roundedrectangle">RoundedRectangle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html#id1">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html#decimalmatrix">DecimalMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html#integermatrix">IntegerMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html#mobjectmatrix">MobjectMatrix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mobject_update_utils.html">MobjectUpdateUtils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="number_line.html">NumberLine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="number_line.html#id1">NumberLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="number_line.html#unitinterval">UnitInterval</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">Numbers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="numbers.html#decimalnumber">DecimalNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numbers.html#integer">Integer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="probability.html">Probability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="probability.html#samplespace">SampleSpace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="probability.html#barchart">BarChart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shape_matchers.html">ShapeMatchers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shape_matchers.html#surroundingrectangle">SurroundingRectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_matchers.html#backgroundrectangle">BackgroundRectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_matchers.html#cross">Cross</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_matchers.html#underline">Underline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="three_d_shading_utils.html">ThreeDShadingUtils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="three_d_utils.html">ThreeDUtils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="three_dimensions.html">ThreeDimensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html#threedvmobject">ThreeDVMobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html#parametricsurface">ParametricSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html#sphere">Sphere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html#cube">Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html#prism">Prism</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="value_tracker.html">ValueTracker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="value_tracker.html#id1">ValueTracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value_tracker.html#exponentialvaluetracker">ExponentialValueTracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value_tracker.html#complexvaluetracker">ComplexValueTracker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vector_field.html">VectorField</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vector_field.html#id1">VectorField</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_field.html#streamlines">StreamLines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_field.html#showpassingflashwiththinningstrokewidth">ShowPassingFlashWithThinningStrokeWidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_field.html#animatedstreamlines">AnimatedStreamLines</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mobject.html" class="btn btn-neutral float-right" title="数学物品Mobject" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../animation/composition.html" class="btn btn-neutral float-left" title="Composition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

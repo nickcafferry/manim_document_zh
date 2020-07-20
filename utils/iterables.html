@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Iterables &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Paths" href="paths.html" />
+    <link rel="prev" title="Images" href="images.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mobject/index.html">物体部分mobject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">工具函数utils</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bezier.html">Bezier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color.html">Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config_ops.html">CONFIG_ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_ops.html">FILE_ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html">Images</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Iterables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">Paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_functions.html">Rate_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_functions.html">Simple_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sounds.html">Sounds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="space_ops.html">Space_ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tex_file_writing.html">Tex_file_writing</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">工具函数utils</a> &raquo;</li>
+        
+      <li>Iterables</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/utils/iterables.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iterables">
+<h1>Iterables<a class="headerlink" href="#iterables" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">manimlib/utils/iterables.py</span></code> 这个文件中主要实现了和列表字典处理有关的函数</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.remove_list_redundancies">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">remove_list_redundancies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">l</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.remove_list_redundancies" title="永久链接至目标">¶</a></dt>
+<dd><p>Used instead of list(set(l)) to maintain order
+Keeps the last occurance of each element</p>
+</dd></dl>
+
+<p>对列表l去重，保留重复元素最后一次出现</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.list_update">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">list_update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">l1</span></em>, <em class="sig-param"><span class="n">l2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.list_update" title="永久链接至目标">¶</a></dt>
+<dd><p>Used instead of list(set(l1).update(l2)) to maintain order,
+making sure duplicates are removed from l1, not l2.</p>
+</dd></dl>
+
+<p>从l1中删除l2中重复项，再与l2合并</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.list_difference_update">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">list_difference_update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">l1</span></em>, <em class="sig-param"><span class="n">l2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.list_difference_update" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>返回两列表中不同的项的列表</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.all_elements_are_instances">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">all_elements_are_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iterable</span></em>, <em class="sig-param"><span class="n">Class</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.all_elements_are_instances" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>iterable列表中的所有元素是否都为Class类</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.adjacent_n_tuples">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">adjacent_n_tuples</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">objects</span></em>, <em class="sig-param"><span class="n">n</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.adjacent_n_tuples" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>objects的相邻n元组（返回zip）</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.adjacent_pairs">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">adjacent_pairs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">objects</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.adjacent_pairs" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>objects相邻对</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.batch_by_property">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">batch_by_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span></em>, <em class="sig-param"><span class="n">property_func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.batch_by_property" title="永久链接至目标">¶</a></dt>
+<dd><p>Takes in a list, and returns a list of tuples, (batch, prop)
+such that all items in a batch have the same output when
+put into property_func, and such that chaining all these
+batches together would give the original list (i.e. order is
+preserved)</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line">输入一个列表，返回一个元组列表（batch，prop）</div>
+<div class="line">这样一个批中的所有项在放入property_func时都具有相同的输出</div>
+<div class="line">并且将所有这些批链接在一起将得到原始列表（即保留顺序）</div>
+</div>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.tuplify">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">tuplify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.tuplify" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>根据obj返回元组</p>
+<ul class="simple">
+<li><p>若obj为str类型，返回(obj, )</p></li>
+<li><p>尝试返回tuple(obj)</p></li>
+<li><p>若报错，返回(obj, )</p></li>
+</ul>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.stretch_array_to_length">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">stretch_array_to_length</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nparray</span></em>, <em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.stretch_array_to_length" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>将nparray扩展至length长度</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.make_even">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">make_even</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iterable_1</span></em>, <em class="sig-param"><span class="n">iterable_2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.make_even" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>将iterable_1和iterable_2调成一样的长度，不足的伸缩调整</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.make_even_by_cycling">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">make_even_by_cycling</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iterable_1</span></em>, <em class="sig-param"><span class="n">iterable_2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.make_even_by_cycling" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>将iterable_1和iterable_2调成一样的长度，不足的循环使用</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.remove_nones">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">remove_nones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sequence</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.remove_nones" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>将sequence中的None去除掉，并返回</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.iterables.concatenate_lists">
+<code class="sig-prename descclassname">manimlib.utils.iterables.</code><code class="sig-name descname">concatenate_lists</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">list_of_lists</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.iterables.concatenate_lists" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>串联列表list_of</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="paths.html" class="btn btn-neutral float-right" title="Paths" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="images.html" class="btn btn-neutral float-left" title="Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

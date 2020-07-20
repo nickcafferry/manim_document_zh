@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Linux &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Mac" href="mac.html" />
+    <link rel="prev" title="安装指南" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">安装指南</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arch-linux">Arch Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mac.html">Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">附：ffmpeg相关用法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mobject/index.html">物体部分mobject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">工具函数utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">安装指南</a> &raquo;</li>
+        
+      <li>Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation/linux.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linux">
+<h1>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">声明</p>
+<p>这一页翻译自EulerTour写的教程</p>
+</div>
+<p>Linux安装没太多坑，Windows也可以使用WSL,Docker等利用Linux环境</p>
+<div class="section" id="ubuntu">
+<h2>Ubuntu<a class="headerlink" href="#ubuntu" title="永久链接至标题">¶</a></h2>
+<p>安装系统依赖库:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># apt install sox ffmpeg libcairo2 libcairo2-dev</span>
+</pre></div>
+</div>
+<p>安装LaTeX发行版(TeXLive-full):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># apt install texlive-full</span>
+</pre></div>
+</div>
+<p>通过pypi安装manimlib（不推荐）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip3 install manimlib</span>
+</pre></div>
+</div>
+<p>或者通过GitHub安装环境（推荐）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/3b1b/manim
+$ cd manim
+$ python3 -m venv ./
+$ source bin/activate
+$ pip3 install -r requirement.txt
+</pre></div>
+</div>
+<p>若要在虚拟环境中使用manim，您需要通过执行 <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">bin/activate</span></code> 来激活环境，若要退出，请使用 <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> 命令。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>pypi上的manimlib不经常更新，而且GitHub存储库还包括用于生成3b1b视频的项目文件。由于api的更改，一些旧项目可能无法正常工作。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>所需要的LaTeX宏包由 <code class="docutils literal notranslate"><span class="pre">manimlib/tex_template.tex</span></code> 决定
+安装 <code class="docutils literal notranslate"><span class="pre">texlive-full</span></code> 是最保险的，但是下载的文件很大
+如果你想要只安装manim需要的宏包，使用下面的替换 <code class="docutils literal notranslate"><span class="pre">texlive-full</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">texlive</span> <span class="n">texlive</span><span class="o">-</span><span class="n">latex</span><span class="o">-</span><span class="n">extra</span> <span class="n">texlive</span><span class="o">-</span><span class="n">fonts</span><span class="o">-</span><span class="n">extra</span>
+<span class="n">texlive</span><span class="o">-</span><span class="n">latex</span><span class="o">-</span><span class="n">recommended</span> <span class="n">texlive</span><span class="o">-</span><span class="n">science</span> <span class="n">texlive</span><span class="o">-</span><span class="n">fonts</span><span class="o">-</span><span class="n">extra</span> <span class="n">tipa</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="arch-linux">
+<h2>Arch Linux<a class="headerlink" href="#arch-linux" title="永久链接至标题">¶</a></h2>
+<p>安装系统依赖库:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pacman -S cairo ffmpeg opencv sox</span>
+</pre></div>
+</div>
+<p>安装LaTeX发行版:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pacman -S texlive-most</span>
+</pre></div>
+</div>
+<p>或者安装 <a class="reference external" href="https://aur.archlinux.org/packages/python-manimlib/">python-manimlib</a><sup>AUR</sup> 包:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://aur.archlinux.org/python-manimlib.git
+$ cd python-manimlib
+$ makepkg -si
+</pre></div>
+</div>
+<p>你可以使用AUR助手，例如 <a class="reference external" href="https://aur.archlinux.org/packages/yay/">yay</a><sup>AUR</sup>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ yay -S python-manimlib
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mac.html" class="btn btn-neutral float-right" title="Mac" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="安装指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

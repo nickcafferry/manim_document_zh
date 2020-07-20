@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sounds &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Space_ops" href="space_ops.html" />
+    <link rel="prev" title="Simple_functions" href="simple_functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mobject/index.html">物体部分mobject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">工具函数utils</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bezier.html">Bezier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color.html">Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config_ops.html">CONFIG_ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_ops.html">FILE_ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iterables.html">Iterables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">Paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_functions.html">Rate_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_functions.html">Simple_functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sounds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="space_ops.html">Space_ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tex_file_writing.html">Tex_file_writing</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">工具函数utils</a> &raquo;</li>
+        
+      <li>Sounds</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/utils/sounds.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sounds">
+<h1>Sounds<a class="headerlink" href="#sounds" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">manimlib/utils/sounds.py</span></code> 这个文件中主要实现了和音频有关的函数</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.sounds.play_chord">
+<code class="sig-prename descclassname">manimlib.utils.sounds.</code><code class="sig-name descname">play_chord</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">nums</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.sounds.play_chord" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>play和弦</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.sounds.play_error_sound">
+<code class="sig-prename descclassname">manimlib.utils.sounds.</code><code class="sig-name descname">play_error_sound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.sounds.play_error_sound" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>播放编译失败声音</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.sounds.play_finish_sound">
+<code class="sig-prename descclassname">manimlib.utils.sounds.</code><code class="sig-name descname">play_finish_sound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.sounds.play_finish_sound" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>播放编译成功声音</p>
+<hr class="docutils" />
+<dl class="py function">
+<dt id="manimlib.utils.sounds.get_full_sound_file_path">
+<code class="sig-prename descclassname">manimlib.utils.sounds.</code><code class="sig-name descname">get_full_sound_file_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sound_file_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.utils.sounds.get_full_sound_file_path" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>使用 <code class="docutils literal notranslate"><span class="pre">seek_full_path_from_defaults</span></code> 获取音频位置</p>
+<ul>
+<li><p>默认文件夹<code class="docutils literal notranslate"><span class="pre">assets/sounds/</span></code></p></li>
+<li><p>扩展名:<code class="docutils literal notranslate"><span class="pre">[.wav,</span> <span class="pre">.mp3]</span></code></p></li>
+<li><p><strong>注意:</strong> 播放编译成功/失败音频的方法</p>
+<blockquote>
+<div><p>在输入命令时加上 <code class="docutils literal notranslate"><span class="pre">--sound</span></code> 选项</p>
+<ul class="simple">
+<li><p>Linux系统安装sox后直接可以使用</p></li>
+<li><p>Windows系统需要下载sox-14-4-1安装包(新版可能会报错)，并将其中的sox.exe复制，重命名为play.exe，填好环境变量就可以使用了</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="space_ops.html" class="btn btn-neutral float-right" title="Space_ops" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simple_functions.html" class="btn btn-neutral float-left" title="Simple_functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

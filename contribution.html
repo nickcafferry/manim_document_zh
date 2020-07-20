@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>贡献规则及编写指南 &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="about.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="关于" href="about.html" />
+    <link rel="prev" title="自定义动画" href="manim_sandbox/animations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">安装指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobject/index.html">物体部分mobject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils/index.html">工具函数utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">贡献规则及编写指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">目录结构规范</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">页面内部规范</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">关于文档字符串</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>贡献规则及编写指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/contribution.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>贡献规则及编写指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>如果你想要为这个文档做出贡献，可以向 <a class="reference external" href="https://github.com/manim-kindergarten/manim_document_zh">这个repo</a> 提出Pull Request，
+同时会自动构建一份文档放在 <a class="reference external" href="https://app.netlify.com/sites/manim-doc/overview">Netlify</a> 上，我们在review了之后会merge，
+并且自动构建并发布到 <a class="reference external" href="https://manim.ml/">GitHub Page这个网站</a> 上。</p>
+<p>这里是一些规范和指南</p>
+<p>首先，文档需要使用 <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> 语言来编写，具体语法见 <a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/rest.html">Sphinx文档</a></p>
+<p>目前未完成的部分见 <a class="reference external" href="https://github.com/manim-kindergarten/manim_document_zh/projects/1">这个repo的project</a></p>
+<div class="section" id="id2">
+<h2>目录结构规范<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>如果是一整个系列的内容，请新建一个文件夹，并且包含 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> 和其他各页的源文件，并写好目录如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">目录</span>
+
+    <span class="o">...</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</li>
+<li><p>如果是单个页面，请直接在 <code class="docutils literal notranslate"><span class="pre">source</span></code> 文件夹中新建一个 <code class="docutils literal notranslate"><span class="pre">rst</span></code> 文件，并改好 <code class="docutils literal notranslate"><span class="pre">source/index.rst</span></code> 中的目录结构</p></li>
+<li><p>如果为某个系列补充页面，请将文件新建在对应的文件夹中，并改好其对应的 <code class="docutils literal notranslate"><span class="pre">index</span></code> 中的目录</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>页面内部规范<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>目前的目录结构是根据 <code class="docutils literal notranslate"><span class="pre">manimlib</span></code> 中文件夹结构排列好的，所以请根据添加内容在 <code class="docutils literal notranslate"><span class="pre">manimlib</span></code> 中的位置添加在对应页面中</p></li>
+<li><p>每个页面中每个类需要先使用二级标题，然后再使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">autoclass::</span> <span class="pre">manimlib.&lt;...&gt;</span></code> 自动生成类名和文档字符串</p>
+<blockquote>
+<div><ul>
+<li><p>如果该类中的方法比较重要需要文档字符串，使用:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">manimlib</span><span class="o">.&lt;...&gt;</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>每个类需要包含明显示例和对应代码（视频或图片均可）</p>
+<blockquote>
+<div><ul>
+<li><p>视频放在 <code class="docutils literal notranslate"><span class="pre">source/assets/mk</span></code> 中，使用下面代码引用（需要注意文件所处的层次）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+
+    <span class="o">&lt;</span><span class="n">video</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span> <span class="n">controls</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">source</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;../_static/mk/视频名.mp4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;video/mp4&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">video</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>图片放在 <code class="docutils literal notranslate"><span class="pre">source/assets/image</span></code> 中，使用下面代码引用（需要注意文件所处的层次）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">../</span><span class="n">assets</span><span class="o">/</span><span class="n">image</span><span class="o">/</span><span class="n">Text</span><span class="o">/</span><span class="n">image1</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+</li>
+<li><p>代码使用（注意缩进使用4个空格，而不是Tab制表符）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. code:: python
+
+   class ...(Scene):
+       def construct(self):
+           ...
+</pre></div>
+</div>
+</li>
+<li><p>示例和代码的类名统一为 <code class="docutils literal notranslate"><span class="pre">&lt;当前要示例的类名&gt;Example</span></code> ，并且将代码放在 <code class="docutils literal notranslate"><span class="pre">example.py</span></code> 中</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>以上均可以通过点击 <code class="docutils literal notranslate"><span class="pre">animation</span></code> 相关页面及 <code class="docutils literal notranslate"><span class="pre">mobject</span></code> 中完成的页面右上角查看源代码来了解</p>
+</div>
+<div class="section" id="id4">
+<h2>关于文档字符串<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line">这个文档用于生成文档字符串的 <code class="docutils literal notranslate"><span class="pre">manimlib</span></code> 在当前repo的 <a class="reference external" href="https://github.com/manim-kindergarten/manim_document_zh/tree/manim">manim分支下</a></div>
+<div class="line">注意文档字符串也需要使用 <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> 语法编写，并符合 <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">PEP257</a> 中规范</div>
+</div>
+<p>如果所添加的内容需要更改文档字符串，请修改manim分支后另外提交pr</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about.html" class="btn btn-neutral float-right" title="关于" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="manim_sandbox/animations.html" class="btn btn-neutral float-left" title="自定义动画" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

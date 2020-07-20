@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Numbers &mdash; manim  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/mk.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Probability" href="probability.html" />
+    <link rel="prev" title="NumberLine" href="number_line.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo_black.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">入门教程向</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/index.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/index.html">练习部分(TODO)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">进阶文档向</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../constants.html">常量部分constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/index.html">属性容器container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画部分animation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">物体部分mobject</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mobject.html">数学物品Mobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/index.html">三种物体基类types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svg/index.html">SVG图像相关物体svg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changing.html">Changing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinate_systems.html">CoordinateSystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame.html">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobject_update_utils.html">MobjectUpdateUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="number_line.html">NumberLine</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Numbers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decimalnumber">DecimalNumber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integer">Integer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="probability.html">Probability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_matchers.html">ShapeMatchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_d_shading_utils.html">ThreeDShadingUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_d_utils.html">ThreeDUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="three_dimensions.html">ThreeDimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value_tracker.html">ValueTracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_field.html">VectorField</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../camera/index.html">相机部分camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene/index.html">场景部分scene(TODO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">工具函数utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">杂项</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manim_sandbox/index.html">manim_sandbox中的自定义类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">贡献规则及编写指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">物体部分mobject</a> &raquo;</li>
+        
+      <li>Numbers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/mobject/numbers.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="numbers">
+<h1>Numbers<a class="headerlink" href="#numbers" title="永久链接至标题">¶</a></h1>
+<div class="section" id="decimalnumber">
+<h2>DecimalNumber<a class="headerlink" href="#decimalnumber" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="manimlib.mobject.numbers.DecimalNumber">
+<em class="property">class </em><code class="sig-prename descclassname">manimlib.mobject.numbers.</code><code class="sig-name descname">DecimalNumber</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.mobject.numbers.DecimalNumber" title="永久链接至目标">¶</a></dt>
+<dd><p>十进制数字（比直接使用TexMobject方便，支持复数）</p>
+<p>传入 <code class="docutils literal notranslate"><span class="pre">number</span></code> 表示初始的数值</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">num_decimal_places</span></code> : 小数位数</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include_sign</span></code> : 正数是否包含”+”标志（默认为False）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">digit_to_digit_buff</span></code> : 两个字符之间的距离（默认为0.05）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">show_ellipsis</span></code> : 是否显示省略号（默认为False）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> : 末尾的单位</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include_background_rectangle</span></code> : 是否包含背景矩形（默认为False）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">edge_to_fix</span></code> : 在变化时，以哪边对齐（默认LEFT）</p></li>
+</ul>
+<dl class="py method">
+<dt id="manimlib.mobject.numbers.DecimalNumber.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.mobject.numbers.DecimalNumber.get_value" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前数值（<code class="docutils literal notranslate"><span class="pre">DecimalNumber.number</span></code>）</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="manimlib.mobject.numbers.DecimalNumber.increment_value">
+<code class="sig-name descname">increment_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delta_t</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.mobject.numbers.DecimalNumber.increment_value" title="永久链接至目标">¶</a></dt>
+<dd><p>给值增加 <code class="docutils literal notranslate"><span class="pre">delta_t</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="manimlib.mobject.numbers.DecimalNumber.set_value">
+<code class="sig-name descname">set_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">number</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.mobject.numbers.DecimalNumber.set_value" title="永久链接至目标">¶</a></dt>
+<dd><p>设置新值（新建一个 <code class="docutils literal notranslate"><span class="pre">DecimalNumber</span></code>）</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="integer">
+<h2>Integer<a class="headerlink" href="#integer" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt id="manimlib.mobject.numbers.Integer">
+<em class="property">class </em><code class="sig-prename descclassname">manimlib.mobject.numbers.</code><code class="sig-name descname">Integer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.mobject.numbers.Integer" title="永久链接至目标">¶</a></dt>
+<dd><p>整数（利用 <code class="docutils literal notranslate"><span class="pre">DecimalNumber</span></code>）</p>
+<p>参数和 <code class="docutils literal notranslate"><span class="pre">DecimalNumber</span></code> 相同</p>
+<dl class="py method">
+<dt id="manimlib.mobject.numbers.Integer.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#manimlib.mobject.numbers.Integer.get_value" title="永久链接至目标">¶</a></dt>
+<dd><p>对值四舍五入后返回</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="probability.html" class="btn btn-neutral float-right" title="Probability" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="number_line.html" class="btn btn-neutral float-left" title="NumberLine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 - This document has been placed in the public domain.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
